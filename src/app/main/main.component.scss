@@ -1,0 +1,27 @@
+.head {
+  padding: 15px;
+  color: #263238;
+  border: 5px solid #fce4ec;
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+  word-wrap: normal;
+}
+
+.btn {
+  margin: 1em auto;
+  display: block;
+  width: 80%;
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+  border-radius: 7px;
+  color: #263238;
+  text-decoration: none;
+  word-break: keep-all;
+}
+
+.btn:hover {
+  color: #607d8b;
+  background-color: #ddd;
+}

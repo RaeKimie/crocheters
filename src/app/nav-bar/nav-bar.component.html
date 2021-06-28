@@ -1,0 +1,7 @@
+<div class="topnav" [ngClass]="{responsive: toggleMenu}">
+  <a routerLink="/" routerLinkActive="active">홈</a>
+  <a routerLink="/converter" routerLinkActive="active">스티치 변환기</a>
+  <a *ngIf="false" routerLink="/projects" routerLinkActive="active">프로젝트</a>
+  <a routerLink="/about" routerLinkActive="active">소개</a>
+  <i class="fas fa-bars icon" [ngClass] (click)="onClick()"></i>
+</div>

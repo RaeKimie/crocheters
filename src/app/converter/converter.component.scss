@@ -1,0 +1,76 @@
+/* btnComponent's private CSS styles */
+.language-dropdown {
+  select {
+    width: 30%;
+    padding: 5px 0;
+  }
+  i {
+    padding: 0 30px;
+  }
+  padding-bottom: 30px;
+}
+
+h3 {
+  margin-bottom: 30px;
+  color: #263238;
+}
+iframe {
+  margin: 10px;
+}
+.bottom {
+  margin-bottom: 25px;
+}
+.btn {
+  color: #263238;
+  list-style-type: none;
+  width: 80%;
+  text-align: center;
+  .selected {
+    background-color: #bbd8dc;
+    color: white;
+  }
+}
+.btn div {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #eee;
+  margin: 1em 0;
+  padding: 17px;
+  border-radius: 7px;
+  text-align: center;
+}
+.btn div:hover {
+  color: #607d8b;
+  background-color: #ddd;
+}
+
+.btn div.selected:hover {
+  background-color: #bbd8dc;
+  color: white;
+}
+
+.display {
+  width: 80%;
+  margin: 0 auto;
+  border: 2px dotted #263238;
+  border-radius: 7px;
+  color: #263238;
+}
+.bold {
+  font-weight: bold;
+}
+.child1 {
+  margin: 0 auto;
+}
+
+.stitchDropdown {
+  color: #263238;
+  margin-bottom: 16px;
+  text-align: center;
+  padding: 5px 0;
+  width: 80%;
+}
+.center {
+  margin: 0 auto;
+}

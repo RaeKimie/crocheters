@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://stitchconverter.netlify.app/sitemap.xml
