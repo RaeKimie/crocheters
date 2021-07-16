@@ -7,6 +7,7 @@ import { DomSanitizer } from "@angular/platform-browser";
 export class SafePipe implements PipeTransform {
 
 	constructor(
+		// eslint-disable-next-line no-unused-vars
 		private sanitizer: DomSanitizer
 	) { }
 

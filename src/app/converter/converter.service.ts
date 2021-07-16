@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { Injectable } from "@angular/core";
 import { Stitch } from "../interfaces/stitch.interface";
 

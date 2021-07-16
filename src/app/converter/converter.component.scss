@@ -1,11 +1,11 @@
 /* btnComponent's private CSS styles */
 .language-dropdown {
-  select {
-    width: 30%;
-    padding: 5px 0;
-  }
-  i {
-    padding: 0 30px;
+	select {
+		width: 30%;
+		padding: 5px 0;
+	}
+	i {
+	padding: 0 30px;
   }
   padding-bottom: 30px;
 }
@@ -26,8 +26,8 @@ iframe {
   width: 80%;
   text-align: center;
   .selected {
-    background-color: #bbd8dc;
-    color: white;
+	background-color: #bbd8dc;
+	color: white;
   }
 }
 .btn div {

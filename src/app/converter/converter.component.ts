@@ -21,6 +21,7 @@ export class ConverterComponent {
 	public videoLang: string;
 	public langSetting = "kr";
 
+	// eslint-disable-next-line no-unused-vars
 	constructor(private converterService: ConverterService, private changeDetector: ChangeDetectorRef) {
 		this.langSetting === "kr" ? this.langOptions = this.converterService.langOptionsKr : this.langOptions = this.converterService.langOptionsEg;
 	}
