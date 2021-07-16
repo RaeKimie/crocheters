@@ -5,10 +5,13 @@
 		"ng": "ng",
 		"start": "ng serve",
 		"build": "ng build",
-		"test": "ng test",
 		"lint": "eslint \"src/**/*.ts\"",
 		"e2e": "ng e2e"
 	},
+	"eslintIgnore": [
+		"test.ts",
+		"main.ts"
+	],
 	"private": true,
 	"dependencies": {
 		"@angular/animations": "~9.0.6",

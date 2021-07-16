@@ -1,18 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss']
+	selector: "app-nav-bar",
+	templateUrl: "./nav-bar.component.html",
+	styleUrls: ["./nav-bar.component.scss"]
 })
-export class NavBarComponent implements OnInit {
-  public toggleMenu: boolean = false;
-  constructor() { }
+export class NavBarComponent {
+	public toggleMenu = false;
+	// constructor() { }
 
-  ngOnInit(): void {
-  }
-  public onClick():void {
-    this.toggleMenu = !this.toggleMenu;
-  }
+	public onClick(): void {
+		this.toggleMenu = !this.toggleMenu;
+	}
 
 }
