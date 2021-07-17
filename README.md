@@ -25,8 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Jenkins
 
 [Install Jenkins](https://www.jenkins.io/doc/pipeline/tour/getting-started/)
-```
- java -jar jenkins.war
-```
+
+Run `java -jar jenkins.war` in the folder where you keep the `jenkins.war` file.
+Open browser change URL `http://localhost:8080/`
 
 
