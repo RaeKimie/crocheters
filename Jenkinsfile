@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('lint') {
             steps {
-                bat 'npm --version'
+                sh 'npm --version'
             }
         }
     }
