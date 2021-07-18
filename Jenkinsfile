@@ -1,9 +1,11 @@
 pipeline {
-    agent { docker { image 'node:14-alpine' } }
+    agent {
+		docker { image 'node:14-alpine' }
+	}
     stages {
         stage('lint') {
             steps {
-                sh 'npm --version'
+                sh 'node --version'
             }
         }
     }
