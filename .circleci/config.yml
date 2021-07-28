@@ -36,7 +36,7 @@ jobs:
       - attach_workspace:
           at: .
       - checkout
-      - run: aws s3 sync ./dist/crocheters s3://crocheters
+      - run: aws s3 sync dist s3://crocheters
 
 
 workflows:
