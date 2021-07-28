@@ -69,18 +69,18 @@
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"options": {
-						"browserTarget": "stitch-converter:build"
+						"browserTarget": "crocheters:build"
 					},
 					"configurations": {
 						"production": {
-							"browserTarget": "stitch-converter:build:production"
+							"browserTarget": "crocheters:build:production"
 						}
 					}
 				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"browserTarget": "stitch-converter:build"
+						"browserTarget": "crocheters:build"
 					}
 				},
 				"test": {
@@ -117,18 +117,18 @@
 					"builder": "@angular-devkit/build-angular:protractor",
 					"options": {
 						"protractorConfig": "e2e/protractor.conf.js",
-						"devServerTarget": "stitch-converter:serve"
+						"devServerTarget": "crocheters:serve"
 					},
 					"configurations": {
 						"production": {
-							"devServerTarget": "stitch-converter:serve:production"
+							"devServerTarget": "crocheters:serve:production"
 						}
 					}
 				}
 			}
 		}
 	},
-	"defaultProject": "stitch-converter",
+	"defaultProject": "crocheters",
 	"cli": {
 		"analytics": "f2c2e765-c208-40e8-8389-d0b531f8866c"
 	}
