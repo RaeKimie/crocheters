@@ -21,16 +21,16 @@ describe("AppComponent", () => {
 		expect(app).toBeTruthy();
 	});
 
-	it("should have as title 'stitch-converter'", () => {
+	it("should have as title 'crocheters'", () => {
 		const fixture = TestBed.createComponent(AppComponent);
 		const app = fixture.componentInstance;
-		expect(app.title).toEqual("stitch-converter");
+		expect(app.title).toEqual("crocheters");
 	});
 
 	it("should render title", () => {
 		const fixture = TestBed.createComponent(AppComponent);
 		fixture.detectChanges();
 		const compiled = fixture.nativeElement;
-		expect(compiled.querySelector(".content span").textContent).toContain("stitch-converter app is running!");
+		expect(compiled.querySelector(".content span").textContent).toContain("crocheters app is running!");
 	});
 });
