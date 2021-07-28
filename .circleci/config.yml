@@ -43,9 +43,9 @@ workflows:
   test_build_deploy:
     jobs:
       - build
-      - test:
-          requires:
-            - build
+      # - test:
+      #     requires:
+      #       - build
       - deploy:
-          requires:
-            - test
+          # requires:
+          #   - test
