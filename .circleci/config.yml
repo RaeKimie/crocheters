@@ -40,12 +40,12 @@ jobs:
 
 
 workflows:
-  test_build_deploy:
+  build_deploy:
     jobs:
       - build
       # - test:
       #     requires:
       #       - build
       - deploy:
-          # requires:
-          #   - test
+          requires:
+            - build
