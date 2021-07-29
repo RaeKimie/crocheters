@@ -6,13 +6,14 @@ import { BehaviorSubject, Observable } from "rxjs";
 })
 export class LangService {
 	public language$: Observable<string>;
-	private language: BehaviorSubject<string> = new BehaviorSubject("en")
-	constructor() {
+	private language: BehaviorSubject<any> = new BehaviorSubject(null)
+	constructor(
+		// eslint-disable-next-line no-unused-vars
+	) {
 		this.language$ = this.language.asObservable();
 	}
 
 	public updateLang(lang: "kr" | "en"): void {
 		this.language.next(lang);
-		console.log(this.language$, "this.lang$");
 	}
 }

@@ -1,9 +1,9 @@
 <div class="topnav" [ngClass]="{responsive: toggleMenu}">
-	<a routerLink="/" routerLinkActive="active">홈</a>
-	<a routerLink="/converter" routerLinkActive="active">스티치 변환기</a>
-	<a *ngIf="false" routerLink="/projects" routerLinkActive="active">프로젝트</a>
+	<a routerLink="/" routerLinkActive="active"> {{lang === 'kr'? '홈' : 'Home'}}</a>
+	<a routerLink="/converter" routerLinkActive="active">{{lang === 'kr'? '스티치 변환기' : 'Stitch Converter'}}</a>
+	<a *ngIf="false" routerLink="/projects" routerLinkActive="active">{{lang === 'kr'? '프로젝트' : 'Projects'}}</a>
+	<a routerLink="/about" routerLinkActive="active">{{lang === 'kr'? '소개' : 'About'}}</a>
 	<a (click)="selectLang('kr')">한국어</a>
 	<a (click)="selectLang('en')">English</a>
-	<a routerLink="/about" routerLinkActive="active">소개</a>
 	<i class="fas fa-bars icon" [ngClass] (click)="onClick()"></i>
 </div>
