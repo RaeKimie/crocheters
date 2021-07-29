@@ -2,7 +2,7 @@
 	<a routerLink="/" routerLinkActive="active"> {{lang === 'kr'? '홈' : 'Home'}}</a>
 	<a routerLink="/converter" routerLinkActive="active">{{lang === 'kr'? '스티치 변환기' : 'Stitch Converter'}}</a>
 	<a *ngIf="false" routerLink="/projects" routerLinkActive="active">{{lang === 'kr'? '프로젝트' : 'Projects'}}</a>
-	<a routerLink="/about" routerLinkActive="active">{{lang === 'kr'? '소개' : 'About'}}</a>
+	<!-- <a routerLink="/about" routerLinkActive="active">{{lang === 'kr'? '소개' : 'About'}}</a> -->
 	<a (click)="selectLang('kr')">한국어</a>
 	<a (click)="selectLang('en')">English</a>
 	<i class="fas fa-bars icon" [ngClass] (click)="onClick()"></i>

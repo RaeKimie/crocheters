@@ -1,4 +1,5 @@
-import { Component, ChangeDetectorRef } from "@angular/core";
+import { Component } from "@angular/core";
+import { LangService } from "../core/lang.service";
 import { Stitch } from "../interfaces/stitch.interface";
 import { ConverterService } from "./converter.service";
 
@@ -19,17 +20,33 @@ export class ConverterComponent {
 	public showVideos = false;
 	public videoList = [];
 	public videoLang: string;
-	public langSetting = "kr";
-
+	public lang: string;
 	// eslint-disable-next-line no-unused-vars
-	constructor(private converterService: ConverterService, private changeDetector: ChangeDetectorRef) {
-		this.langSetting === "kr" ? this.langOptions = this.converterService.langOptionsKr : this.langOptions = this.converterService.langOptionsEg;
+	constructor(private converterService: ConverterService, private langService: LangService,) {
+
+		this.langService.language$.subscribe(selectedLang => {
+			this.reset();
+			this.lang = selectedLang;
+			if (selectedLang === "kr") {
+				this.langOptions = this.converterService.langOptionsKr;
+			} else {
+				this.langOptions = this.converterService.langOptionsEg;
+			}
+		});
+
 	}
 
-	public onSelectStitch(id: string): void {
+	public reset(): void {
 		this.videoList = [];
 		this.showVideos = false;
 		this.videoLang = null;
+		this.langFrom = null;
+		this.langTo = null;
+		this.stitchToDisplay = null;
+	}
+
+	public onSelectStitch(id: string): void {
+		this.reset();
 		const convertedStitch = this.targetStitchNames.find(item => item["id"] === id);
 		if (convertedStitch) {
 			this.stitchToDisplay = convertedStitch;

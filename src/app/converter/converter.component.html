@@ -1,4 +1,4 @@
-<h3>언어를 선택하세요</h3>
+<h3>{{lang ==='kr'? '변환 언어를 선택하세요' : 'Select languages to convert'}}</h3>
 <div class="language-dropdown">
 	<select (change)="updateLanguageFrom($event.target.value)">
 		<option class="center" value="">---</option>
@@ -13,21 +13,23 @@
 
 <ng-container *ngIf="langFrom && langTo">
 	<select class="stitchDropdown" (change)="onSelectStitch($event.target.value)">
-		<option value="">--{{ langSetting ==='kr'? "코바늘 스티치 종류를 선택하세요": "Select a crochet stitch type"}}--</option>
+		<option value="">--{{ lang ==='kr'? "코바늘 스티치 종류를 선택하세요": "Select a crochet stitch type"}}--</option>
 		<option *ngFor="let stitch of stitchNames" [value]="stitch.id">{{stitch.name}}</option>
 	</select>
 </ng-container>
 
 <ng-container *ngIf="stitchToDisplay">
 	<div class="display">
-		<p>{{langSetting ==='kr'? "명칭" : "Name"}}: <span class="bold">{{stitchToDisplay.name}}</span></p>
-		<p>{{langSetting ==='kr'? "약어" : "Abbreviation"}}: <span class="bold">{{stitchToDisplay.abv?
+		<p>{{lang ==='kr'? "명칭" : "Name"}}: <span class="bold">{{stitchToDisplay.name}}</span></p>
+		<p>{{lang ==='kr'? "약어" : "Abbreviation"}}: <span class="bold">{{stitchToDisplay.abv?
 				stitchToDisplay.abv: stitchToDisplay.id}}</span></p>
 	</div>
 	<div class="child1 btn">
-		<div (click)="showYoutubeList(stitchToDisplay, 'en')" [class.selected]="videoLang === 'en'"> English Tutorials
+		<div (click)="showYoutubeList(stitchToDisplay, 'en')" [class.selected]="videoLang === 'en'"> {{lang === 'kr'?
+			'영어 영상으로 배우기' : 'English Tutorials'}}
 		</div>
-		<div (click)="showYoutubeList(stitchToDisplay, 'kr')" [class.selected]="videoLang === 'kr'"> 한국어 영상으로 배우기</div>
+		<div (click)="showYoutubeList(stitchToDisplay, 'kr')" [class.selected]="videoLang === 'kr'"> {{lang === 'kr'?
+			'한국어 영상으로 배우기': 'Korean Tutorials'}}</div>
 	</div>
 	<div *ngIf="videoList.length > 0">
 		<iframe *ngFor="let video of videoList" width="315" height="250" [src]="video | safe" frameborder="0"
