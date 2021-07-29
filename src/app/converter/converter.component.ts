@@ -25,7 +25,7 @@ export class ConverterComponent {
 	constructor(private converterService: ConverterService, private langService: LangService,) {
 
 		this.langService.language$.subscribe(selectedLang => {
-			this.reset();
+			this.reset(true);
 			this.lang = selectedLang;
 			if (selectedLang === "kr") {
 				this.langOptions = this.converterService.langOptionsKr;
@@ -36,13 +36,15 @@ export class ConverterComponent {
 
 	}
 
-	public reset(): void {
+	public reset(all?: boolean): void {
 		this.videoList = [];
 		this.showVideos = false;
 		this.videoLang = null;
-		this.langFrom = null;
-		this.langTo = null;
 		this.stitchToDisplay = null;
+		if (all) {
+			this.langFrom = null;
+			this.langTo = null;
+		}
 	}
 
 	public onSelectStitch(id: string): void {

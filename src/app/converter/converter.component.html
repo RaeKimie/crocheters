@@ -26,10 +26,10 @@
 	</div>
 	<div class="child1 btn">
 		<div (click)="showYoutubeList(stitchToDisplay, 'en')" [class.selected]="videoLang === 'en'"> {{lang === 'kr'?
-			'영어 영상으로 배우기' : 'English Tutorials'}}
+			'영어로 배우기' : 'English Tutorials'}}
 		</div>
 		<div (click)="showYoutubeList(stitchToDisplay, 'kr')" [class.selected]="videoLang === 'kr'"> {{lang === 'kr'?
-			'한국어 영상으로 배우기': 'Korean Tutorials'}}</div>
+			'한국어로 배우기': 'Korean Tutorials'}}</div>
 	</div>
 	<div *ngIf="videoList.length > 0">
 		<iframe *ngFor="let video of videoList" width="315" height="250" [src]="video | safe" frameborder="0"
