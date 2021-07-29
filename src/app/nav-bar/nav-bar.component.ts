@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { LangService } from "../core/lang.service";
 
 @Component({
 	selector: "app-nav-bar",
@@ -7,10 +8,17 @@ import { Component } from "@angular/core";
 })
 export class NavBarComponent {
 	public toggleMenu = false;
-	// constructor() { }
+	constructor(
+		// eslint-disable-next-line no-unused-vars
+		private langService: LangService
+	) { }
 
 	public onClick(): void {
 		this.toggleMenu = !this.toggleMenu;
+	}
+
+	public selectLang(lang: "kr" | "en"): void {
+		this.langService.updateLang(lang);
 	}
 
 }
