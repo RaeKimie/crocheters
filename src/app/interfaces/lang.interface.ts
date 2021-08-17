@@ -1,4 +1,4 @@
-export interface Lang {
+export interface GeneralCopy {
 	krLang: string;
 	enLang: string;
 	home:string;
