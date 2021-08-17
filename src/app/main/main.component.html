@@ -3,8 +3,6 @@
 	<p>v 0.1.5</p>
 </div>
 <div>
-	<a routerLink="/converter" routerLinkActive="active" class="btn">{{lang === 'kr'? '스티치 변환기': 'Stitch
-		Converter'}}</a>
-	<a *ngIf="false" routerLink="/projects" routerLinkActive="active" class="btn">{{lang === 'kr'? '프로젝트 리스트':
-		'Projects'}}</a>
+	<a routerLink="/converter" routerLinkActive="active" class="btn">{{copy.stitchConverter}}</a>
+	<a *ngIf="false" routerLink="/projects" routerLinkActive="active" class="btn">{{copy.projects}}</a>
 </div>

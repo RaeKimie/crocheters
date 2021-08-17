@@ -1,0 +1,13 @@
+{
+	"krLang": "Korean",
+	"enLang": "English",
+	"home":"Home",
+	"stitchConverter":"Stitch Converter",
+	"projects": "Projects",
+	"converterSelectStitch": "Select a crochet stitch type",
+	"converterSelectLang":"Select languages to convert",
+	"converterStitchName": "Name",
+	"converterStitchAbv": "Abbreviation",
+	"converterEnTutorial": "English Tutorials",
+	"converterKrTutorial": "Korean Tutorials"
+}

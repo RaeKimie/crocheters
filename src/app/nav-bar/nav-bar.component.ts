@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { LangService } from "../core/lang.service";
+import { GeneralCopy } from "../interfaces/lang.interface";
 
 
 @Component({
@@ -9,13 +10,14 @@ import { LangService } from "../core/lang.service";
 })
 export class NavBarComponent {
 	public toggleMenu = false;
-	public lang = "en";
+	public navCopy: GeneralCopy;
+
 	constructor(
 		// eslint-disable-next-line no-unused-vars
 		private langService: LangService,
 
 	) {
-		this.langService.language$.subscribe(selectedLang => this.lang = selectedLang);
+		this.langService.generalCopy$.subscribe(copy => this.navCopy = copy);
 	}
 
 	public onClick(): void {
