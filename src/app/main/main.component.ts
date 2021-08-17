@@ -7,9 +7,11 @@ import { LangService } from "../core/lang.service";
 	styleUrls: ["./main.component.scss"]
 })
 export class MainComponent implements OnInit {
-	public lang: string;
+	public navCopy: any;
 	// eslint-disable-next-line no-unused-vars
-	constructor(private langService: LangService,) { this.langService.language$.subscribe(selectedLang => this.lang = selectedLang); }
+	constructor(private langService: LangService,) {
+		this.langService.generalCopy$.subscribe(copy =>this.navCopy = copy);
+	}
 
 	ngOnInit(): void {
 	}
