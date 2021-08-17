@@ -2,16 +2,17 @@ import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
 import krCopy from "./kr.json";
 import enCopy from "./en.json";
+import { Lang } from "../interfaces/lang.interface";
 
 @Injectable({
 	providedIn: "root"
 })
 export class LangService {
-	public generalCopy$:Observable<object>;
+	public generalCopy$:Observable<Lang>;
 	public language$: Observable<string>;
 
 	private language: BehaviorSubject<any> = new BehaviorSubject("en");
-	private generalCopy: BehaviorSubject<any> = new BehaviorSubject(enCopy);
+	private generalCopy: BehaviorSubject<Lang> = new BehaviorSubject(enCopy);
 
 	constructor(
 		// eslint-disable-next-line no-unused-vars
