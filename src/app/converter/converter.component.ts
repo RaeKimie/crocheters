@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { LangService } from "../core/lang.service";
-import { GeneralCopy } from "../interfaces/lang.interface";
 import { Stitch } from "../interfaces/stitch.interface";
 import { ConverterService } from "./converter.service";
 
@@ -21,28 +20,18 @@ export class ConverterComponent {
 	public showVideos = false;
 	public videoList = [];
 	public videoLang: string;
-	public copy: GeneralCopy;
+	public lang: string;
 	// eslint-disable-next-line no-unused-vars
 	constructor(private converterService: ConverterService, private langService: LangService,) {
 
-		// this.langService.language$.subscribe(selectedLang => {
-		// 	this.reset(true);
-		// 	this.lang = selectedLang;
-		// 	if (selectedLang === "kr") {
-		// 		this.langOptions = this.converterService.langOptionsKr;
-		// 	} else {
-		// 		this.langOptions = this.converterService.langOptionsEg;
-		// 	}
-		// });
-
-		this.langService.generalCopy$.subscribe(copy => {
+		this.langService.language$.subscribe(selectedLang => {
 			this.reset(true);
-			this.copy = copy;
-			// if (selectedLang === "kr") {
-			// this.langOptions = this.converterService.langOptionsKr;
-			// } else {
-			// this.langOptions = this.converterService.langOptionsEg;
-			// }
+			this.lang = selectedLang;
+			if (selectedLang === "kr") {
+				this.langOptions = this.converterService.langOptionsKr;
+			} else {
+				this.langOptions = this.converterService.langOptionsEg;
+			}
 		});
 
 	}
