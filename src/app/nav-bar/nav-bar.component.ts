@@ -10,7 +10,6 @@ import { GeneralCopy } from "../interfaces/lang.interface";
 })
 export class NavBarComponent {
 	public toggleMenu = false;
-	public lang = "en";
 	public navCopy: GeneralCopy;
 
 	constructor(
@@ -18,8 +17,7 @@ export class NavBarComponent {
 		private langService: LangService,
 
 	) {
-		this.langService.language$.subscribe(selectedLang => this.lang = selectedLang);
-		this.langService.generalCopy$.subscribe(copy =>this.navCopy = copy);
+		this.langService.generalCopy$.subscribe(copy => this.navCopy = copy);
 	}
 
 	public onClick(): void {
