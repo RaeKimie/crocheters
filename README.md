@@ -10,5 +10,8 @@ What have I learned?
 * Route53 - get a custom domain for the app and connect with CloudFront
 * AWS Certified Manager - create SSL certificate for https requests
 * CloudFront - create distribution to connect with s3 bucket and configure SSL certificate
+* Lambda
+* API Gateway
+* DynamoDB
 * Crochet😉
 
